@@ -1,6 +1,35 @@
 # Introduction to FiddleFiddle
 
-FiddleFiddle (피들피들) 은 .NET 기반의 Fiddler 확장 프로젝트 입니다. Fiddler 는 웹 디버깅(Web Debugging)용도로 주로 사용되는 툴인데요. 저 코마는 이 기능을 좀더 확장하여 API Request 를 자동 보관하는 확장 프로그램을 만들었습니다.
+FiddleFiddle (피들피들) 은 .NET 기반의 Fiddler 확장 프로젝트 입니다. Fiddler 는 웹 디버깅(Web Debugging)용도로 주로 사용되는 툴인데요. 저 코마는 이 기능을 확장하여 API Request 를 자동 보관하는 확장 프로그램과 서버를 개발하였습니다.
+
+## Dev Stack 및 Communication
+
+- Stack
+  - Django
+  - Rest Framework
+  - C#
+  - WPF
+  - Postgresql (hstore, citext)
+    - citext : case insensitive string type
+    - hstore : sets of key/value pairs 
+
+![Dev Stack & Communication](./img/fiddlefiddle_comm.png)
+
+## Toc
+
+|목차|
+|---|
+| Change Log |
+| 기능 |
+| 수집 항목 명세 |
+| 구동 방법 |
+| 효과 |
+| 설치 | 
+| 핵심 포인트 | 
+| 효과 | 
+| TODO |
+| 부록 - 프로그램 라이프사이클 |
+
 
 ## Change Log
 
@@ -151,6 +180,15 @@ curl http://www.example.com/where/am/i?param1=value1&param2=value2
 - Web Fuzzing 솔루션 구축의 기반 작업
 
 ## 설치
+
+### Host 파일 등록
+
+호스트 파일을 등록한다.
+
+```file
+# c:/windows/etc/drivers/hosts 
+127.0.0.1 yes24.cert.com
+```
 
 ### Postgresql 구동
 
